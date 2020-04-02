@@ -1,0 +1,474 @@
+    1  sudo yum -y groupinstall "development tools"
+    2  sudo yum -y install httpd
+    3  sudo yum -y install epel-release wget
+    4  sudo wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+    5  sudo rpm -Uvh remi-release-7.rpm
+    6  sudo yum -y install --enablerepo=remi-php71 php php-pdo php-mysqlnd php-mbstring php-xml php-fpm php-common php-devel
+    7  php -v
+    8  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"~
+    9  php composer-setup.php
+   10  composer -v
+   11  pwd
+   12  cd /
+   13  ls
+   14  cd home/
+   15  ls
+   16  ls -la
+   17  cd vagrant 
+   18  ls
+   19  cd /vagrant/
+   20  ls
+   21  ls -la
+   22  php -v
+   23  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+   24  pwd
+   25  history
+   26  php composer-setup.php
+   27  php -r "unlink('composer-setup.php');"
+   28  sudo mv composer.phar /usr/local/bin/composer
+   29  composer -v
+   30  pwd
+   31  cd /vagrant
+   32  pwd
+   33  composer create-project laravel/laravel=5.8 --prefer-dist laravel_test
+   34  sudo vi /etc/httpd/conf/httpd.conf
+   35  sudo systemctl start httpd
+   36  sudo vi /etc/httpd/conf/httpd.conf
+   37  sudo systemctl start httpd
+   38  sudo vi /etc/httpd/conf/httpd.conf
+   39  sudo systemctl start httpd
+   40  systemctl status httpd.service
+   41  journalctl -xe
+   42  sudo systemctl start httpd
+   43  sudo vi /etc/httpd/conf/httpd.conf
+   44  cd 
+   45  sudo systemctl start httpd
+   46  cd laravel_test/
+   47  sudo systemctl start httpd
+   48  cd /vagrant
+   49  pwd
+   50  26475 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+   51  journalctl -xe
+   52  Job for httpd.service failed because the control process exited with error code. See "systemctl status httpd.service" and "journalctl -xe" for details.
+   53  ls /etc/httpd/logs/
+   54  sudo ls /etc/httpd/logs/
+   55  sudo tail -f /etc/httpd/logs/error_log
+   56  sudo tail -f /etc/httpd/logs/error.log
+   57  ls /etc/httpd/logs/
+   58  sudo ls /etc/httpd/logs/
+   59  sudo su -
+   60  sudo systemctl start httpd
+   61  systemctl status httpd.service
+   62  sudo ls /etc/httpd/logs/
+   63  sudo systemctl start httpd
+   64  systemctl status httpd.service
+   65  sudo vi /etc/selinux/config
+   66  exit
+   67  sudo systemctl start httpd
+   68  sudo systemctl start firewalld.service
+   69  sudo firewall-cmd --add-service=http --zone=public --permanent
+   70  sudo firewall-cmd --reload
+   71  sudo systemctl stop httpd
+   72  sudo vi /etc/yum.repos.d/nginx.repo
+   73  sudo yum install -y nginx
+   74  nginx -v
+   75  sudo systemctl start nginx
+   76  sudo vi /etc/nginx/conf.d/default.conf
+   77  sudo vi /etc/php-fpm.d/www.conf
+   78  sudo systemctl restart nginx
+   79  sudo systemctl start php-fpm
+   80  sudo vi /etc/nginx/conf.d/default.conf
+   81  sudo systemctl restart nginx
+   82  sudo systemctl start php-fpm
+   83  sudo vi /etc/nginx/conf.d/default.conf
+   84  sudo systemctl restart nginx
+   85  sudo systemctl start php-fpm
+   86  sudo wget http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
+   87  sudo rpm -Uvh mysql57-community-release-el7-7.noarch.rpm
+   88  sudo yum install -y mysql-community-server
+   89  mysql -v
+   90  mysql --version
+   91  sudo systemctl start mysqld
+   92  mysql -u root -p
+   93  sudo cat /var/log/mysqld.log | grep 'temporary password'
+   94  mysql -u root -p
+   95  sudo systemctl stop nginx
+   96  exit
+   97  ls /
+   98  ls/ usr
+   99  ls /usr
+  100  pwd
+  101  cd /vagrant
+  102  pwd
+  103  cd ~
+  104  pwd
+  105  ls
+  106  cd /vagtant
+  107  pwd
+  108  cd /vagrant
+  109  pwd
+  110  cd usr
+  111  cd /usr
+  112  cd /vagrant
+  113  mkdir server_lesson && cd server_lesson
+  114  git init
+  115  git --version
+  116  ls -a .git
+  117  pwd
+  118  git add server_lesson
+  119  git add [server_lesson]
+  120  git status
+  121  git branch
+  122  git add *
+  123  git commit
+  124  git add
+  125  git add .
+  126* git commit 
+  127  git status
+  128  git commit -m "initial commit"
+  129  touch first.txt
+  130  git commit -m "initial commit"
+  131  git add first.txt
+  132  git commit -m "initial commit"
+  133  git config --global color.ui auto
+  134  git branch
+  135  git status
+  136  git log
+  137  cd /vagrant
+  138  ls
+  139  mkdir server_lesson/linux_practice/public
+  140  mkdir -p server_lesson/linux_practice/public
+  141  ls mkdir -p server_lesson/linux_practice
+  142  git commit
+  143  git add
+  144  git add server_lesson
+  145  pwd
+  146  ls
+  147  cd server_lesson/
+  148  git add linux_practice
+  149  git commit -m "make linux_practice"
+  150  git commit
+  151  cd /vagrant
+  152  pwd
+  153  touch server_lesson/linux_practice/public/index.php
+  154  ls server_lesson/linux_practice/public/index.php
+  155  pwd
+  156  ls
+  157  cd server_lesson/
+  158  git add
+  159  git add *
+  160  git commit
+  161  git commit -m "make index.php"
+  162  git stauts
+  163  git status
+  164  git branch
+  165  git log
+  166  cd /vagrant/server_lesson && ls
+  167  cd /vagrant/server_lesson/linux_practice/public
+  168  cp index.php index_bk.php
+  169  ls
+  170  cd /vagrant/server_lesson/linux_practice
+  171  cp -r public tmp
+  172  ls ./ public tmp
+  173  cd /vagrant
+  174  pwd
+  175  la
+  176  ls
+  177  cd server_lesson/
+  178  git add *
+  179  git commit -m "make index.php index_bk.php tmp"
+  180  cd /vagrant/server_lesson/linux_practice/public
+  181  cd /vagrant
+  182  mv server_lesson/linux_practice server_lesson/linux_practice1
+  183  mkdir linux_practice2 linux_practice3
+  184  mv ./linux_practice2 ./server_lesson
+  185  pwd
+  186  ls
+  187  cd server_lesson/
+  188  ls
+  189   cd /vagrant/server_lesson/linux_practice1/tmp/
+  190  pwd
+  191  rm *_bk.php
+  192  ls
+  193  cd /vagrant
+  194  rm server_lesson/first.txt
+  195  rm -r linux_practice3
+  196  ls server_lesson
+  197  ls
+  198  cd server_lesson/
+  199  ls
+  200  cd linux_practice2
+  201  ls
+  202  cd./
+  203  cd ../
+  204  pwd
+  205  ls
+  206  cd linux_practice1
+  207  ls
+  208  cd ../
+  209  pwd
+  210  git add *
+  211  git commit -m "rm some file"
+  212  git log
+  213  cd /vagrant/server_lesson
+  214  echo '# サーバレッスン' > README.md
+  215  echo 'Linuxプラクティス' >> README.md
+  216  echo '-----------------' >> README.md
+  217  cat README.md
+  218  cd /vagrant/server_lesson
+  219  vi README.md
+  220  ls
+  221  pwd
+  222  cd linux_practice2
+  223  ls
+  224  cd ../
+  225  ls
+  226  cd linux_practice2
+  227  ls
+  228  cd ../
+  229  ls
+  230  cd linux_practice1
+  231  ls
+  232  cd public/
+  233  ls
+  234  cd ../
+  235  ls
+  236  cd public/
+  237  lsa
+  238  ls
+  239  cd ../
+  240  ls
+  241  cd tmp
+  242  ls
+  243  cd ../
+  244  cd /vagrant
+  245  ls
+  246  cd server_lesson/
+  247  git@github.com:hot-and-cool/server_lesson.git
+  248  git@github.com:[hot-and-cool]/server_lesson.git
+  249  git remote -v
+  250  git add*
+  251  git add *
+  252  git commit -m "complete"
+  253  git remote add origin https://github.com/hot-and-cool/server_lesson.git
+  254  git remote -v
+  255  git push origin master
+  256  git branch
+  257  git remote -v
+  258  git add *
+  259  git commit -m "push"
+  260  ls
+  261  cd linux_practice1
+  262  ls
+  263  cd public/
+  264  ls
+  265  cd ../
+  266  ls
+  267  cd tmp/
+  268  ls
+  269  git branch
+  270  git push origin master
+  271  ls
+  272  cd ../
+  273  ls
+  274  cd linux_practice2
+  275  mkdr documents
+  276  mkdr "documents"
+  277  mkdir documents
+  278  ls
+  279  cd documents/
+  280  ls
+  281  touch gizumo{01..50}.md}
+  282  ls
+  283  cd ../
+  284  ls
+  285  rm documents/
+  286  rm -r documents/
+  287  ls
+  288  mkdir documents
+  289  ls
+  290  cd documents/
+  291  touch gizumo{01..50}.md}
+  292  ls
+  293  cd ../
+  294  ls
+  295  rm -r documents/
+  296  ls
+  297  mkdir documents
+  298  ls
+  299  cd documents/
+  300  ls
+  301  touch gizumo{01..50}.md
+  302  ls
+  303  /vagrant/
+  304  ls
+  305  cd /vagrunt
+  306  cd /vagrant
+  307  ls
+  308  cd server_lesson/
+  309  git add *
+  310  git commit -m "make gizumo.md"
+  311  git log
+  312  ls
+  313  cd linux_practice2
+  314  pwd
+  315  ls
+  316  ped
+  317  pwd
+  318  mkdir trash
+  319  ls
+  320  cd trash
+  321  mv /document/gizumo{20..40}.md /trash
+  322  mv /server_lesson/document/gizumo{20..40}.md /server_lesson/trash
+  323  pwd
+  324  mv /document/gizumo{20..40}.md /trash
+  325  ls
+  326  pwd
+  327  cd ../
+  328  ls
+  329* 
+  330  mv /linux_practice2/document/gizumo{20..40}.md /linux_practice2/trash
+  331  ls
+  332  cd documents/
+  333  ls
+  334  mv gizumo{20..40}.md ../trash
+  335  pwd
+  336  cd ../
+  337  ls
+  338  cd trash/
+  339  ls
+  340  cd ../
+  341  ls
+  342  cd ../
+  343  ls
+  344  cd linux_practice2
+  345  ls
+  346  cd ../
+  347  git add *
+  348  git commit -m 
+  349  git commit -m "rm gizumo.md"
+  350  git log
+  351  ls
+  352  cd linux_practice2
+  353  ls
+  354  touch .gitignore
+  355  ls
+  356  pwd
+  357  cd ../
+  358  ls
+  359  cd linux_practice2
+  360  ls -a
+  361  vi .gitignore
+  362  history -100
+  363  git commit -m "make gitignore"
+  364  git log
+  365  history
+  366  history -100
+  367  history 100
+  368  history 100>exec_command.log
+  369  ls
+  370  cd exec_command.log
+  371  vi exec_command.log
+  372  cd documents/
+  373  ls
+  374  cd ../
+  375  cd trash/
+  376  ls
+  377  git stutas
+  378  git status
+  379  git commit -m "mv gizumo.md"
+  380  git log
+  381  cd ../
+  382  git add *
+  383  git status
+  384  git diff
+  385  git add -A
+  386  git status
+  387  git commit -m "complete"
+  388  git status
+  389  ls
+  390  cd linux_practice2
+  391  ls
+  392  cd trash/
+  393  ls
+  394  git push origin master
+  395  git reset --hard HEAD^
+  396  git push -f origin master
+  397  git status
+  398  ls
+  399  cd ../
+  400  ls -a
+  401  touch .gitignore
+  402  ls -a
+  403  vi .gitignore
+  404  git rm --cached /trash/gizumo{20-29}.md
+  405  ls
+  406  git rm --cached trash/gizumo{20-29}.md
+  407  ls
+  408  cd ../
+  409  ls
+  410  cd linux_practice2
+  411  ls
+  412  cd documents/
+  413  ls
+  414  rm -r documents
+  415  cd../
+  416  ls
+  417  cd ../
+  418  ls
+  419  re -r documents/
+  420  rm -r documents/
+  421  ls
+  422  mkdir documents
+  423  ]ls
+  424  ls
+  425  touch gizumo{01..50}.md
+  426  ls
+  427  cd ../
+  428  ls
+  429  cd linux_practice2
+  430  ls
+  431  rm gizumo{01..50}.md
+  432  ls
+  433  cd documents/
+  434  ls
+  435  touch gizumo{01..50}.md
+  436  ls
+  437  las
+  438  la
+  439  ls
+  440  cd ../
+  441  ls
+  442  cd trash/
+  443  ls
+  444  cd .//
+  445  ls
+  446  cd../
+  447  cd ../
+  448  ls
+  449  rm trash/
+  450  rm -r trash/
+  451  ls
+  452  mkdir trash
+  453  ls
+  454  cd trash/
+  455  ls
+  456  cd ../
+  457  ls
+  458  mv documents/gizumo{20..40}.md trash
+  459  cd documents/
+  460  ls
+  461  cd ../
+  462  ls
+  463  cd trash/
+  464  ls
+  465  cd ../
+  466  ls
+  467  touch .gitignore
+  468  ls
+  469  ls -a
+  470  vi .gitignore
+  471  histry 100
+  472  history 100
+  473  l
+  474  history > exec_command.log
