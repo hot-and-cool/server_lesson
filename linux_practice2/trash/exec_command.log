@@ -1,0 +1,113 @@
+  460  ls
+  461  cd ../
+  462  ls
+  463  cd trash/
+  464  ls
+  465  cd ../
+  466  ls
+  467  touch .gitignore
+  468  ls
+  469  ls -a
+  470  vi .gitignore
+  471  histry 100
+  472  history 100
+  473  l
+  474  history > exec_command.log
+  475  ls
+  476  cd documents/
+  477  ls
+  478  cd ../
+  479  ls
+  480  cd trash/
+  481  ls
+  482  cd ../
+  483  ls
+  484  ls -a
+  485  cd ../
+  486  git add *
+  487  git add -A
+  488  git status
+  489  ls
+  490  cd linux_practice2
+  491  ls
+  492  git add *
+  493  git status
+  494  git commit -m "
+
+
+q
+;
+ls
+
+
+
+exit
+qiet
+quit
+ls
+"
+  495  git log
+  496  git commit --amend
+  497  git log
+  498  git push origin master
+  499  ls
+  500  rm -r trash/
+  501  git add *
+  502  git commnit
+  503  git commit
+  504  git log
+  505  git commit -m "delete"
+  506  git log 
+  507  git commit
+  508  git add *
+  509  git status
+  510  cd ../
+  511  git add *
+  512  ls
+  513  cd linux_practice2
+  514  ls
+  515  git add*
+  516  git add 
+  517  git add *
+  518  git stutas
+  519  git stutus
+  520  git status
+  521  git add *
+  522  git commit
+  523  ls
+  524  mkdir trash
+  525  ls
+  526  cd trash/
+  527  ls
+  528  touch gizumo{20..29}.md
+  529  ls
+  530  git add *
+  531  git commit
+  532  git push origin master
+  533  git commit
+  534  git stauts
+  535  git status
+  536  cd ../
+  537  git staus
+  538  git status
+  539  git add *
+  540  git add -A
+  541  git commit "fixed"
+  542  git commit -m "fixed"
+  543  git staus
+  544  git status
+  545  git push origin master
+  546  ls
+  547  git rm -r --cached trash
+  548  git status
+  549  git add *
+  550  git status
+  551  git commit -m "remove cashe"
+  552  git status
+  553  git push origin master
+  554  gi
+  555  git push origin master
+  556  ls
+  557  cd trash/
+  558  ls
+  559  history 100 > exec_command.log
